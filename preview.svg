@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1b26"/>
+      <stop offset="55%" stop-color="#16161e"/>
+      <stop offset="100%" stop-color="#0f0f14"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#24283b"/>
+      <stop offset="100%" stop-color="#1f2335"/>
+    </linearGradient>
+    <linearGradient id="barFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7aa2f7"/>
+      <stop offset="100%" stop-color="#bb9af7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- desktop backdrop -->
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1280" cy="180" r="260" fill="#7aa2f7" opacity="0.06"/>
+  <circle cx="320" cy="820" r="300" fill="#bb9af7" opacity="0.05"/>
+
+  <!-- faux wallpaper hint -->
+  <g opacity="0.18">
+    <rect x="180" y="220" width="520" height="340" rx="18" fill="#414868"/>
+    <rect x="740" y="260" width="280" height="180" rx="14" fill="#565f89"/>
+    <rect x="1060" y="240" width="360" height="220" rx="14" fill="#3b4261"/>
+  </g>
+
+  <!-- top bar -->
+  <rect x="40" y="36" width="1520" height="52" rx="16" fill="#1f2335" opacity="0.92" filter="url(#soft)"/>
+  <text x="72" y="69" font-family="JetBrains Mono, DejaVu Sans Mono, monospace" font-size="18" fill="#c0caf5">󰣇</text>
+  <text x="110" y="69" font-family="Inter, DejaVu Sans, sans-serif" font-size="16" fill="#a9b1d6">1  2  3</text>
+  <text x="760" y="69" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="600" fill="#c0caf5">14:11</text>
+
+  <!-- right bar cluster -->
+  <g font-family="Inter, DejaVu Sans, sans-serif" font-size="15" fill="#a9b1d6">
+    <text x="1180" y="69">󰂯</text>
+    <text x="1220" y="69">󰤨</text>
+    <text x="1260" y="69">󰕾</text>
+  </g>
+
+  <!-- icdown pill (active) -->
+  <rect x="1310" y="46" width="92" height="32" rx="10" fill="#7aa2f7" opacity="0.22"/>
+  <rect x="1310" y="46" width="92" height="32" rx="10" fill="none" stroke="#7aa2f7" stroke-width="1.5"/>
+  <text x="1324" y="68" font-family="JetBrains Mono, DejaVu Sans Mono, monospace" font-size="15" fill="#c0caf5">󰄧 ✓</text>
+
+  <!-- connector from pill to panel -->
+  <path d="M1356 78 L1356 118" stroke="#7aa2f7" stroke-width="2" opacity="0.45"/>
+
+  <!-- details panel -->
+  <g filter="url(#shadow)">
+    <rect x="980" y="118" width="420" height="560" rx="20" fill="url(#panelGrad)"/>
+    <rect x="980" y="118" width="420" height="560" rx="20" fill="none" stroke="#3b4261" stroke-width="1"/>
+
+    <!-- hero -->
+    <text x="1012" y="168" font-family="Inter, DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#c0caf5">iCloud backup</text>
+    <text x="1012" y="200" font-family="Inter, DejaVu Sans, sans-serif" font-size="15" fill="#9ece6a">Up to date</text>
+    <text x="1012" y="228" font-family="Inter, DejaVu Sans, sans-serif" font-size="14" fill="#a9b1d6">Account: yo***@example.com</text>
+
+    <line x1="1012" y1="252" x2="1368" y2="252" stroke="#3b4261" stroke-width="1"/>
+
+    <!-- progress -->
+    <text x="1012" y="290" font-family="Inter, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#565f89">PROGRESS</text>
+    <text x="1330" y="290" font-family="Inter, DejaVu Sans, sans-serif" font-size="18" font-weight="700" fill="#c0caf5" text-anchor="end">100%</text>
+
+    <rect x="1012" y="310" width="356" height="12" rx="6" fill="#414868"/>
+    <rect x="1012" y="310" width="356" height="12" rx="6" fill="url(#barFill)"/>
+
+    <text x="1012" y="350" font-family="Inter, DejaVu Sans, sans-serif" font-size="15" fill="#c0caf5">2015 of 2015 files</text>
+    <text x="1012" y="376" font-family="Inter, DejaVu Sans, sans-serif" font-size="14" fill="#a9b1d6">24.4 GB of 24.4 GB</text>
+    <text x="1012" y="404" font-family="Inter, DejaVu Sans, sans-serif" font-size="13" fill="#565f89">Last iCloud scan: 2026-11-10 11:43</text>
+    <text x="1012" y="428" font-family="Inter, DejaVu Sans, sans-serif" font-size="13" fill="#565f89">Folder: ~/Pictures/iCloud</text>
+    <text x="1012" y="452" font-family="Inter, DejaVu Sans, sans-serif" font-size="13" fill="#565f89">Region: cn</text>
+
+    <line x1="1012" y1="478" x2="1368" y2="478" stroke="#3b4261" stroke-width="1"/>
+
+    <!-- buttons -->
+    <g font-family="Inter, DejaVu Sans, sans-serif" font-size="15">
+      <rect x="1012" y="500" width="356" height="40" rx="10" fill="#1a1b26" stroke="#3b4261"/>
+      <text x="1190" y="526" text-anchor="middle" fill="#c0caf5">󰑓  Copy now</text>
+
+      <rect x="1012" y="552" width="356" height="40" rx="10" fill="#1a1b26" stroke="#3b4261"/>
+      <text x="1190" y="578" text-anchor="middle" fill="#c0caf5">󰉋  Open photo folder</text>
+
+      <rect x="1012" y="604" width="356" height="40" rx="10" fill="#1a1b26" stroke="#3b4261"/>
+      <text x="1190" y="630" text-anchor="middle" fill="#c0caf5">󰍃  Sign out</text>
+    </g>
+  </g>
+
+  <!-- brand caption -->
+  <text x="80" y="930" font-family="Inter, DejaVu Sans, sans-serif" font-size="36" font-weight="700" fill="#c0caf5">icdown</text>
+  <text x="80" y="972" font-family="Inter, DejaVu Sans, sans-serif" font-size="20" fill="#a9b1d6">iCloud Photos backup for Omarchy</text>
+</svg>
